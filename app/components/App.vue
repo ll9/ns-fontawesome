@@ -1,8 +1,11 @@
 <template>
     <Page>
         <ActionBar title="Welcome to NativeScript-Vue!"/>
-        <GridLayout columns="*" rows="*, auto">
-            <Label class="fa" :text="'fa-cut' | fonticon" />
+        <GridLayout columns="*, *" rows="*, 4*, 4*, *">
+            <Button class="fa" :text="'fa-map' | fonticon" row="1" col="0" />
+            <Button class="fa" :text="'fa-map-pin' | fonticon" row="1" col="1" />
+            <Button class="fa" :text="'fa-list' | fonticon" row="2" col="0" />
+            <Button class="fa" :text="'fa-cog' | fonticon" row="2" col="1" />
         </GridLayout>
     </Page>
 </template>
@@ -23,25 +26,9 @@ ActionBar {
   color: #ffffff;
 }
 
-.message {
-  vertical-align: center;
-  text-align: center;
-  font-size: 20;
-  color: #333333;
+Button {
+    font-size: 50%;
+    background: dodgerblue;
+    color: white;
 }
-
-.far {
-    font-family: fa-regular-400;
-    font-weight: 400;
-  }
-  
-  .fab {
-    font-family: fa-brands-400;
-    font-weight: 400;
-  }
-  
-  .fas {
-    font-family: fa-solid-900;
-    font-weight: 900;
-  }
 </style>
